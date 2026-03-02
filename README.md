@@ -206,6 +206,7 @@ data:
   - CronJob sends specific requests based on which markets require refresh.
   - Reduces direct ties to Kubernetes at an application-level, keeping it at the configuration-level.
   - Rate limiting, batch processing, better worker management of high-compute work
+- Introduce auto-scaling of workers to handle increases and decreases in workload
 - Replace ConfigMap with a Custom Resource:
   - Stronger state tracking.
   - Improved observability.
