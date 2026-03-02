@@ -193,7 +193,7 @@ kind: ConfigMap
 data:
     hash: XXXXXXXXXXX
     metrics:
-        - db_column: current_occupancy_rate
+        - name: occupancy_rate
           api_key: avg_occupancy_rate
           polarity: positive
           weight: 0.75
