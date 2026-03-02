@@ -200,11 +200,17 @@ data:
 ```
 
 # Future Enhancements
-- Support timezone grouping and split CronJobs to reduce peak database contention.
-- Enable market-specific algorithms and weight sets.
+- Store market snapshots instead of using latest (critical improvement)
+- Use event messaging service such as RabbitMQ to process health score update requests:
+  - Controller alogirithm change events trigger "update all" requests.
+  - CronJob sends specific requests based on which markets require refresh.
+  - Reduces direct ties to Kubernetes at an application-level, keeping it at the configuration-level.
 - Replace ConfigMap with a Custom Resource:
   - Stronger state tracking.
   - Improved observability.
+- Improve scoring robustness and deal with outliers.
+- Support timezone grouping and split CronJobs to reduce peak database contention.
+- Enable market-specific algorithms and weight sets.
   - More expressive spec (e.g., per-market metadata, last updated times).
 - If ownership constraints emerge:
   - Introduce owner foreign keys.
