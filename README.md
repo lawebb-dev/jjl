@@ -205,6 +205,7 @@ data:
   - Controller alogirithm change events trigger "update all" requests.
   - CronJob sends specific requests based on which markets require refresh.
   - Reduces direct ties to Kubernetes at an application-level, keeping it at the configuration-level.
+  - Rate limiting, batch processing, better worker management of high-compute work
 - Replace ConfigMap with a Custom Resource:
   - Stronger state tracking.
   - Improved observability.
