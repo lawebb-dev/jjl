@@ -211,6 +211,7 @@ data:
   - Stronger state tracking.
   - Improved observability.
 - Improve scoring robustness and deal with outliers.
+- Consider using AI to offer suggested healthscore improvements.
 - Support timezone grouping and split CronJobs to reduce peak database contention.
 - Enable market-specific algorithms and weight sets.
   - More expressive spec (e.g., per-market metadata, last updated times).
